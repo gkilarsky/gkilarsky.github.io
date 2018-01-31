@@ -3,6 +3,17 @@ body{
 	background:lightgreen;
 }
 
+/* INITIALS */
+.initial{
+	position:static;
+	top:5px;
+	left:5px;
+	background:black;
+	font-weight:bold;
+	color:white;
+	width:200px;
+}
+
 /* BREAKS */
 .break{
 	width:100%;
