@@ -52,7 +52,10 @@
 					<br><br>
 					<input id="item1-qty" class="item-qty" type="number" value="0" min="0" max="5">
 					<br><br>
-					<div id="item1-subtotal" class="item-subtotal">Subtotal: </div>
+					<div id="item1-subtotal" class="item-subtotal">
+						<span class="subtotal-text">Subtotal: $</span>
+						<span id="item1-subtotal-value"></span>
+					</div>
 				</div>
 				<div class="receipt-item-div">
 					<div class="item-pic item2-pic"></div>
@@ -62,7 +65,10 @@
 					<br><br>
 					<input id="item2-qty" class="item-qty" type="number" value="0" min="0" max="5">
 					<br><br>
-					<div id="item2-subtotal" class="item-subtotal">Subtotal: </div>
+					<div id="item2-subtotal" class="item-subtotal">
+						<span class="subtotal-text">Subtotal: $</span>
+						<span id="item2-subtotal-value"></span>
+					</div>
 				</div>
 				<div class="receipt-item-div">
 					<div class="item-pic item3-pic"></div>
@@ -72,7 +78,10 @@
 					<br><br>
 					<input id="item3-qty" class="item-qty" type="number" value="0" min="0" max="5">
 					<br><br>
-					<div id="item3-subtotal" class="item-subtotal">Subtotal: </div>
+					<div id="item3-subtotal" class="item-subtotal">
+						<span class="subtotal-text">Subtotal: $</span>
+						<span id="item3-subtotal-value"></span>
+					</div>
 				</div>
 				<br>
 				<center>
@@ -106,9 +115,9 @@
 			var item2_qty = parseInt(document.getElementById('item2-qty').value);
 			var item3_qty = parseInt(document.getElementById('item3-qty').value);
 		
-			var item1_subtotal = document.getElementById('item1-subtotal');
-			var item2_subtotal = document.getElementById('item2-subtotal');
-			var item3_subtotal = document.getElementById('item3-subtotal');
+			var item1_subtotal = document.getElementById('item1-subtotal-value');
+			var item2_subtotal = document.getElementById('item2-subtotal-value');
+			var item3_subtotal = document.getElementById('item3-subtotal-value');
 		
 			var total_value = document.getElementById('total-value');
 
@@ -116,7 +125,13 @@
 			var item2_sub = item2_qty * 5;
 			var item3_sub = item3_qty * 10;
 			
-			var total = item1_sub + item2_sub + item3_sub;
+			item1_subtotal.innerHTML = item1_sub;
+			item2_subtotal.innerHTML = item2_sub;
+			item3_subtotal.innerHTML = item3_sub;
+			
+			var total_notax = item1_sub + item2_sub + item3_sub;		
+			var tax = total_notax * 0.08;	
+			var total = total_notax + tax;
 			
 			total_value.innerHTML = total;
 		}
