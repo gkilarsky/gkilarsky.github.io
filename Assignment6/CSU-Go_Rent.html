@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rent | CSU Go</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="CSU-Go_Stylesheet_A3.css">
+</head>
+<body>
+
+	<div class="initial">Student Project #6: G.K.</div>
+	
+	<a class="register" href="CSU-Go_Register.html">Register</a>
+	<a class="rent active" href="CSU-Go_Rent.html">Rent</a>
+
+	<div class="break"></div>
+
+<!-- HEADER -->
+
+	<center>
+	<div class="page-header">CSU GO</div>
+	</center>
+	
+	<div class="break"></div>
+	
+<!-- NAVBAR -->
+
+	<center>
+	<div class="nav-bar">
+		<a class="nav-item" href="CSU-Go_Home.html">HOME</a>
+		<a class="nav-item" href="CSU-Go_About.html">ABOUT</a>
+		<a class="nav-item" href="CSU-Go_Contact.html">CONTACT US</a>
+		<a class="nav-item" href="CSU-Go_Receipt.html">RECEIPT</a>
+	</div>
+	</center>
+	
+	<div class="break"></div>
+	
+<!-- BODY -->
+
+	<center>
+	<div class="body-div rent-body">
+		<div class="info-div rent-info-div">
+			
+			<div class="rent-header">RENT YOUR ITEM HERE!</div>
+			
+			<center>
+			<div class="rent-inputs">
+				
+				<div class="rent-select-label">Select an item to rent from the list:</div>
+				<select id="rent-item-selection">
+					<option value="laptop">laptop</option>
+					<option value="calculator">calculator</option>
+					<option value="charger">charger</option>
+					<option value="textbook">textbook</option>
+				</select>
+				
+				<div class="rent-date-label">Choose a start date:</div>
+				<input type="date" id="rent-start-date" class="rent-date" required>
+				
+				<div class="rent-date-label">Choose an end date:</div>
+				<input type="date" id="rent-end-date" class="rent-date" required>
+				
+			</div>
+			</center>
+			
+			<center>
+			<button id="rent-submit" onClick="Estimate()">Estimate Rent Price</button>
+			</center>
+			
+			<center>
+				<div id="rent-total"></div>
+			</center>
+
+		</div>
+	
+	</div>
+	</center>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+
+		function Estimate(){
+			var item = document.getElementById("rent-item-selection");
+
+			var itemvalue = 0;
+
+			if(item.value = "laptop"){
+				itemvalue = 20;
+			}else if(item.value="calculator"){
+				itemvalue = 10;
+			}else if(item.value="charger"){
+				itemvalue = 5;
+			}else if(item.value="textbook"){
+				itemvalue = 30;
+			}
+
+			var start = document.getElementById("rent-start-date").value;
+			var end = document.getElementById("rent-end-date").value;
+
+			var startDay = new Date(start);
+			var endDay = new Date(end);
+
+			var millisecondsPerDay = 1000 * 60 * 60 * 24;
+			var millisBetween = endDay.getTime() - startDay.getTime();
+
+			var days = millisBetween/millisecondsPerDay;
+
+			// alert(Math.floor(days));
+
+			var total = document.getElementById("rent-total");
+
+			var total_value = (itemvalue * days) + ((itemvalue * days) * 0.08);
+
+			total.innerHTML = '$' + total_value;
+		}
+
+	</script>
+</body>
+</html>

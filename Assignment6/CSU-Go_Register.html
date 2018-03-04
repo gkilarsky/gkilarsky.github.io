@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register | CSU Go</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="CSU-Go_Stylesheet_A3.css">
+</head>
+<body>
+
+	<div class="initial">Student Project #6: G.K.</div>
+	
+	<a class="register" href="CSU-Go_Register.html">Register</a>
+	<a class="rent" href="CSU-Go_Rent.html">Rent</a>
+
+	<div class="break"></div>
+
+<!-- HEADER -->
+
+	<center>
+	<div class="page-header">CSU GO</div>
+	</center>
+	
+	<div class="break"></div>
+	
+<!-- NAVBAR -->
+
+	<center>
+	<div class="nav-bar">
+		<a class="nav-item" href="CSU-Go_Home.html">HOME</a>
+		<a class="nav-item" href="CSU-Go_About.html">ABOUT</a>
+		<a class="nav-item" href="CSU-Go_Contact.html">CONTACT US</a>
+		<a class="nav-item" href="CSU-Go_Receipt.html">RECEIPT</a>
+	</div>
+	</center>
+	
+	<div class="break"></div>
+	
+<!-- BODY -->	
+	
+	<center>
+	<div class="body-div register-body">
+	
+		<div class="info-div register-info-div">
+			<center>
+			<div id="register-form">
+				<table class="register-table">
+					<tr>
+						<th colspan="2" class="reg-text-left">Last Name</th>
+						<th colspan="2" class="reg-text-left">First Name</th>
+					</tr>
+					<tr>
+						<td colspan="2"><input id="last-name" class="register-input" pattern="[A-Z][A-Za-z-']{1,}" placeholder=" Lastname" required></td>
+						<td colspan="2"><input id="first-name" class="register-input" pattern="[A-Z][A-Za-z-']{1,}" placeholder=" Firstname" required></td>
+					</tr>
+					<tr>
+						<th colspan="4" class="reg-text-left">Street Address</th>
+					</tr>
+					<tr>
+						<td colspan="4"><input id="street-address" class="register-input" pattern="[A-Za-z0-9- ']{1,}" placeholder=" #### Street Name" required></td>
+					</tr>
+					<tr>
+						<th colspan="2" class="reg-text-left">City</th>
+						<th colspan="2" class="reg-text-left">Zip</th>
+					</tr>
+					<tr>
+						<td colspan="2"><input id="city" class="register-input" pattern="[A-Za-z]{1,}" placeholder=" City Name" required></td>
+						<td colspan="2"><input id="zip" class="register-input" pattern="[0-9]{5,9}" placeholder=" #####" required></td>
+					</tr>
+					<tr>
+						<th colspan="2" class="reg-text-right">Phone Number</th>
+						<td colspan="2"><input id="phone" class="register-input" pattern="[0-9]{3}[-]{1}[0-9]{3}[-]{1}[0-9]{4}" placeholder=" ###-###-####" required></td>
+					</tr>
+					<tr>
+						<th colspan="2" class="reg-text-right">E-Mail</th>
+						<td colspan="2"><input id="email" class="register-input" pattern="[A-Za-z0-9._]{1,}[@]{1}[A-Za-z0-9._]{1,}[.]{1}(com|org|edu|io)" placeholder=" e-mail@domain.com" required></td>
+					</tr>
+					<tr>
+						<th colspan="1" class="reg-text-right">Birth Date</th>
+						<td colspan="1"><input id="birth-month" class="register-input" type="number" min="1" max="12" placeholder=" month (1-12)" required></td>
+						<td colspan="1"><input id="birth-day" class="register-input" type="number" min="1" max="31" placeholder=" day (1-31)" required></td>
+						<td colspan="1"><input id="birth-year" class="register-input" type="number" min="1900" max="2050" placeholder=" year (1900-2050)" required></td>
+					</tr>
+				</table>
+				
+				<button id="register-submit" onClick="Validate()">REGISTER</button>
+				
+			</div>
+			</center>
+		</div>
+		
+		<!-- VALIDATION REPORT -->
+		
+		<div style="display: none" id="validate-div" class="info-div">
+		
+			<div class="val-title">Registration Summary Report</div>
+		
+			<div class="val-info">
+				<span class="val-label">Last Name: </span>
+				<span id="val-last" class="val-data">test</span>
+				<br>
+				<span id="val-last-status" class="val-status"></span>
+			</div>
+			<div class="val-info">
+				<span class="val-label">First Name: </span>
+				<span id="val-first" class="val-data"></span>
+				<br>
+				<span id="val-first-status" class="val-status"></span>
+			</div>
+			<div class="val-info">
+				<span class="val-label">Street Address: </span>
+				<span id="val-street" class="val-data"></span>
+				<br>
+				<span id="val-street-status" class="val-status"></span>
+			</div>
+			<div class="val-info">
+				<span class="val-label">City: </span>
+				<span id="val-city" class="val-data"></span>
+				<br>
+				<span id="val-city-status" class="val-status"></span>
+			</div>
+			<div class="val-info">
+				<span class="val-label">Zip Code: </span>
+				<span id="val-zip" class="val-data"></span>
+				<br>
+				<span id="val-zip-status" class="val-status"></span>
+			</div>
+			<div class="val-info">
+				<span class="val-label">Phone Number: </span>
+				<span id="val-phone" class="val-data"></span>
+				<br>
+				<span id="val-phone-status" class="val-status"></span>
+			</div>
+			<div class="val-info">
+				<span class="val-label">E-Mail: </span>
+				<span id="val-email" class="val-data"></span>
+				<br>
+				<span id="val-email-status" class="val-status"></span>
+			</div>
+			<div class="val-info">
+				<span class="val-label">Date of Birth: </span>
+				<span id="val-datemonth" class="val-data"></span>
+				<span class="slash val-data">/</span>
+				<span id="val-dateday" class="val-data"></span>
+				<span class="slash val-data">/</span>
+				<span id="val-dateyear" class="val-data"></span>
+				<br>
+				<span id="val-date-status" class="val-status"></span>
+			</div>
+		</div>
+		
+		
+		<div class="break"></div>
+	
+	</div>
+	</center>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+	
+		function Validate(){
+			var validation = document.getElementById("validate-div");
+			
+			if(validation.style.display == "none"){
+				validation.style.display = "block";
+			}
+		
+			var last = document.getElementById("last-name");
+			var first = document.getElementById("first-name");
+			var street = document.getElementById("street-address");
+			var city = document.getElementById("city");
+			var zip = document.getElementById("zip");
+			var phone = document.getElementById("phone");
+			var email = document.getElementById("email");
+			var datemonth = document.getElementById("birth-month");
+			var dateday = document.getElementById("birth-day");
+			var dateyear = document.getElementById("birth-year");
+
+			var lastdata = document.getElementById("val-last");
+			var firstdata = document.getElementById("val-first");
+			var streetdata = document.getElementById("val-street");
+			var citydata = document.getElementById("val-city");
+			var zipdata = document.getElementById("val-zip");
+			var phonedata = document.getElementById("val-phone");
+			var emaildata = document.getElementById("val-email");
+			var datemonthdata = document.getElementById("val-datemonth");
+			var datedaydata = document.getElementById("val-dateday");
+			var dateyeardata = document.getElementById("val-dateyear");
+
+			var laststatus = document.getElementById("val-last-status");
+			var firststatus = document.getElementById("val-first-status");
+			var streetstatus = document.getElementById("val-street-status");
+			var citystatus = document.getElementById("val-city-status");
+			var zipstatus = document.getElementById("val-zip-status");
+			var phonestatus = document.getElementById("val-phone-status");
+			var emailstatus = document.getElementById("val-email-status");
+			var datestatus = document.getElementById("val-date-status");
+
+			lastdata.innerHTML = last.value;
+			firstdata.innerHTML = first.value;
+			streetdata.innerHTML = street.value;
+			citydata.innerHTML = city.value;
+			zipdata.innerHTML = zip.value;
+			phonedata.innerHTML = phone.value;
+			emaildata.innerHTML = email.value;
+			datemonthdata.innerHTML = datemonth.value;
+			datedaydata.innerHTML = dateday.value;
+			dateyeardata.innerHTML = dateyear.value;
+			
+			if(!last.validity.valid){
+				laststatus.innerHTML = "Make sure your last name begins with a capital letter and only uses letters!";
+			}else{
+				laststatus.innerHTML = "";
+			}
+			
+			if(!first.validity.valid){
+				firststatus.innerHTML = "Make sure your first name begins with a capital letter and only uses letters!";
+			}else{
+				firststatus.innerHTML = "";
+			}
+			
+			if(!street.validity.valid){
+				streetstatus.innerHTML = "Make sure your street name is accurate and doesn't use any illegal characters!";
+			}else{
+				streetstatus.innerHTML = "";
+			}
+			
+			if(!city.validity.valid){
+				citystatus.innerHTML = "Make sure your city name only uses letters!";
+			}else{
+				citystatus.innerHTML = "";
+			}
+			
+			if(!zip.validity.valid){
+				zipstatus.innerHTML = "Make sure your zip code is the appropriate 5-digit length and only uses numbers!";
+			}else{
+				zipstatus.innerHTML = "";
+			}
+			
+			if(!phone.validity.valid){
+				phonestatus.innerHTML = "Make sure your phone number is in the ###-###-#### format and only uses numbers!";
+			}else{
+				phonestatus.innerHTML = "";
+			}
+			
+			if(!email.validity.valid){
+				emailstatus.innerHTML = "Make sure your e-mail uses valid characters followed by an @ symbol and a valid domain name!";
+			}else{
+				emailstatus.innerHTML = "";
+			}
+			
+			if(!datemonth.validity.valid||!dateday.validity.valid||!dateyear.validity.valid){
+				datestatus.innerHTML = "Make sure your date has appropriate and existing values! (i.e. Month: 1-12, Day: 1-31, Year: 1900 - 2050)"
+			}else{
+				datestatus.innerHTML = "";
+			}
+		}
+	
+	</script>
+</body>
+</html>
