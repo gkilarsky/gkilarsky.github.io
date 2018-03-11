@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home | CSU Go</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="CSU-Go_Stylesheet_A3.css">
+</head>
+<body>
+
+	<div class="initial">Student Project #7: G.K.</div>
+	
+	<a class="register" href="CSU-Go_Register.html">Register</a>
+	<a class="rent" href="CSU-Go_Rent.html">Rent</a>
+
+	<div class="break"></div>
+
+<!-- HEADER -->
+
+	<center>
+	<div class="page-header">CSU GO</div>
+	</center>
+	
+	<div class="break"></div>
+
+<!-- IMAGE SLIDESHOW -->
+
+	<center>
+
+		<div class="home-slideshow">
+			<img class="home-slide" src="csu_outdoors.jpg">
+			<img class="home-slide" src="textbooks.jpg">
+			<img class="home-slide" src="finding_books.jpg">
+		</div>
+
+	</center>
+	
+<!-- NAVBAR -->
+
+	<center>
+	<div class="nav-bar">
+		<a class="nav-item active" href="CSU-Go_Home.html">HOME</a>
+		<a class="nav-item" href="CSU-Go_About.html">ABOUT</a>
+		<a class="nav-item" href="CSU-Go_Contact.html">CONTACT US</a>
+		<a class="nav-item" href="CSU-Go_Receipt.html">RECEIPT</a>
+	</div>
+	</center>
+	
+	<div class="break"></div>
+	
+<!-- BODY -->	
+	
+	<center>
+	<div class="body-div home-body">
+		<div class="info-div">
+			<span class="info-header">Introducing CSU Go!</span><br>
+			<span class="info">
+			Similar to Amazon's new "Amazon Go" campaign, Cleveland State University will now
+			be offering students the opportunity to "grab-and-go." Due to the incredible amount
+			of classes and learning that students are responsible for in today's educational
+			environment, Cleveland State has elected to severely shorten the length of time and
+			the amount of hastle involved in purchasing textbooks and school supplies from the
+			university's generous book store. The basic idea is the following...
+			<br><br>
+			Students and faculty will be asked to swipe their university identification cards in
+			order to enter the store. Once inside, individuals will then be able to pick various
+			items and supplies from specially-designed shelves, which are built to detect how much
+			of what item was taken. Then, once the student or faculty member leaves the premesis,
+			the amound due to the school will be credited to that individuals CampusNet account.
+			<br><br>
+			It is said that this process will help busy students and teachers alike quickly grab what
+			they need and continue with their packed schedules.
+			</span>
+		</div>
+		<div class="break"></div>
+		<div class="break"></div>
+		<center>
+	<!-- 
+		<div class="gallery-div">
+			<div class="image-div home-image hi-1"></div>
+			<div class="image-div home-image hi-2"></div>
+			<div class="image-div home-image hi-3"></div>
+		</div>
+	-->
+		<center>
+	</div>
+	</center>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+
+		var myIndex = 0;
+		carousel();
+
+		function carousel(){
+			var i;
+			var x = document.getElementsByClassName("home-slide");
+			for(i=0;i<x.length;i++){
+				x[i].style.display="none";
+			}
+			myIndex++;
+			if(myIndex>x.length){
+				myIndex = 1;
+			}
+			x[myIndex-1].style.display="block";
+			setTimeout(carousel,2000);
+		}
+
+	</script>
+</body>
+</html>

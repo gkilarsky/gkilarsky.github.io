@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Receipt | CSU Go</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="CSU-Go_Stylesheet_A3.css">
+</head>
+<body>
+
+	<div class="initial">Student Project #7: G.K.</div>
+	
+	<a class="register" href="CSU-Go_Register.html">Register</a>
+	<a class="rent" href="CSU-Go_Rent.html">Rent</a>
+
+	<div class="break"></div>
+
+<!-- HEADER -->
+
+	<center>
+	<div class="page-header">CSU GO</div>
+	</center>
+	
+	<div class="break"></div>
+	
+<!-- NAVBAR -->
+
+	<center>
+	<div class="nav-bar">
+		<a class="nav-item" href="CSU-Go_Home.html">HOME</a>
+		<a class="nav-item" href="CSU-Go_About.html">ABOUT</a>
+		<a class="nav-item" href="CSU-Go_Contact.html">CONTACT US</a>
+		<a class="nav-item active" href="CSU-Go_Receipt.html">RECEIPT</a>
+	</div>
+	</center>
+	
+	<div class="break"></div>
+	
+<!-- BODY -->	
+	
+	<center>
+	<div class="body-div receipt-body">
+	
+		<div class="info-div receipt-info-div">
+
+			<span class="info-header">Check Out Your Items Here!</span>
+
+			<br>
+
+			<div name="csugo-receipt">
+				<div class="receipt-item-div">
+					<div class="item-pic item1-pic"></div>
+					<div class="item-name">Pencils</div>
+					<br><br>
+					<div class="item-unitprice">$3.00</div>
+					<br><br>
+					<input id="item1-qty" class="item-qty" type="number" value="0" min="0" max="5">
+					<br><br>
+					<div id="item1-subtotal" class="item-subtotal">
+						<span class="subtotal-text">Subtotal: $</span>
+						<span id="item1-subtotal-value"></span>
+					</div>
+				</div>
+				<div class="receipt-item-div">
+					<div class="item-pic item2-pic"></div>
+					<div class="item-name">Notebook</div>
+					<br><br>
+					<div class="item-unitprice">$5.00</div>
+					<br><br>
+					<input id="item2-qty" class="item-qty" type="number" value="0" min="0" max="5">
+					<br><br>
+					<div id="item2-subtotal" class="item-subtotal">
+						<span class="subtotal-text">Subtotal: $</span>
+						<span id="item2-subtotal-value"></span>
+					</div>
+				</div>
+				<div class="receipt-item-div">
+					<div class="item-pic item3-pic"></div>
+					<div class="item-name">Calculator</div>
+					<br><br>
+					<div class="item-unitprice">$10.00</div>
+					<br><br>
+					<input id="item3-qty" class="item-qty" type="number" value="0" min="0" max="5">
+					<br><br>
+					<div id="item3-subtotal" class="item-subtotal">
+						<span class="subtotal-text">Subtotal: $</span>
+						<span id="item3-subtotal-value"></span>
+					</div>
+				</div>
+				<br>
+				<center>
+				<button class="submit-button" onClick="Calculate()">SUBMIT</button>
+				</center>
+			</div>
+
+			<br><br>
+			
+			<center>
+			
+			<div id="receipt-total">
+				<span id="total-text">TOTAL: $</span>
+				<span id="total-value"></span>
+			</div>
+			
+			</center>
+		</div>
+
+		<div class="break"></div>
+	
+	</div>
+	</center>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+	
+		function Calculate(){
+			var item1_qty = parseInt(document.getElementById('item1-qty').value);
+			var item2_qty = parseInt(document.getElementById('item2-qty').value);
+			var item3_qty = parseInt(document.getElementById('item3-qty').value);
+		
+			var item1_subtotal = document.getElementById('item1-subtotal-value');
+			var item2_subtotal = document.getElementById('item2-subtotal-value');
+			var item3_subtotal = document.getElementById('item3-subtotal-value');
+		
+			var total_value = document.getElementById('total-value');
+
+			var item1_sub = item1_qty * 3;
+			var item2_sub = item2_qty * 5;
+			var item3_sub = item3_qty * 10;
+			
+			item1_subtotal.innerHTML = item1_sub;
+			item2_subtotal.innerHTML = item2_sub;
+			item3_subtotal.innerHTML = item3_sub;
+			
+			var total_notax = item1_sub + item2_sub + item3_sub;		
+			var tax = total_notax * 0.08;	
+			var total = total_notax + tax;
+			
+			total_value.innerHTML = total;
+		}
+	
+	</script>
+</body>
+</html>

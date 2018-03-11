@@ -1,0 +1,656 @@
+body{
+	margin:0;
+	background:lightgreen;
+}
+
+/* INITIALS */
+.initial{
+	background:black;
+	font-weight:bold;
+	color:white;
+}
+
+/* BREAKS */
+.break{
+	width:100%;
+	height:30px;
+}
+
+/* PAGE HEADERS */
+.page-header{
+	font-size:45px;
+	font-weight:bold;
+	font-family:Times New Roman;
+	color:limegreen;
+	background:black;
+}
+
+/* TOP BUTTONS */
+.register{
+	display:block;
+	background:forestgreen;
+	font-weight:bold;
+	color:white;
+	font-family:sans-serif;
+	text-decoration:none;
+	text-align:center;
+}
+.register:hover{
+	background:dodgerblue;
+	color:white;
+}
+.rent{
+	display:block;
+	background:forestgreen;
+	font-weight:bold;
+	color:white;
+	font-family:sans-serif;
+	text-decoration:none;
+	text-align:center;
+}
+.rent:hover{
+	background:dodgerblue;
+	color:white;
+}
+
+/* NAVIGATION */
+.nav-bar{
+	position:relative;
+}
+.nav-item{
+	display:block;
+	height:30px;
+	background:forestgreen;
+	
+	font-size:20px;
+	font-family:sans-serif;
+	color:white;
+	text-decoration:none;
+	line-height:33px;
+}
+.nav-item:hover{
+	cursor:pointer;
+	background:dodgerblue;
+	color:white;
+}
+.active{
+	background:white;
+	color:forestgreen;
+}
+
+/* BODY DIVS */
+.body-div{
+	position:relative;
+	background:white;
+	padding-bottom:30px;
+	margin-bottom:50px;
+}
+
+/* INFO DIVS */
+.info-div{
+	position:relative;
+	width:80%;
+	top:30px;
+	border:solid lightgreen 2px;
+	border-radius:30px 0px;
+	text-align:left;
+	padding:15px;
+}
+.info-header{
+	font-size:35px;
+	line-height:50px;
+	font-weight:bold;
+	color:forestgreen;
+}
+.info{
+	font-size:18px;
+}
+
+.about-info-div{
+	position:relative;
+	height:auto;
+	top:30px;
+	text-align:center;
+	padding:15px;
+}
+.about-sub-div{
+	border:solid lightgreen 2px;
+	border-radius:30px 0px;
+	text-align:left;
+	padding:15px;
+}
+
+.contact-info-div{
+	padding:10px;
+	width:100%;
+}
+.contact-info{
+	margin:20px;
+	font-size:25px;
+	font-family:sans-serif;
+	font-weight:bold;
+	color:forestgreen;
+}
+
+/* PICTURES */
+.gallery-div{
+	text-align:center;
+}
+.image-div{
+	background-size:cover;
+}
+.home-image{
+	height:200px;
+	width:200px;
+	display:inline-block;
+	margin-left:40px;
+	margin-right:40px;
+	border-radius:30px 0px;
+	border:solid 2px forestgreen;
+	box-shadow:7px 7px lightgreen;
+}
+.hi-1{
+	background-image:url(csu_outdoors.jpg);
+}
+.hi-2{
+	background-image:url(textbooks.jpg);
+}
+.hi-3{
+	background-image:url(finding_books.jpg);
+}
+
+/* HOME SLIDESHOW */
+.home-slideshow{
+	overflow:hidden;
+	margin-bottom:30px;
+	border-radius:30px 0px;
+}
+.home-slide{
+	width:100%;
+}
+
+.about-pic-1{
+	background-image:url(viking_outfitters_logo.gif);
+	background-size:cover;
+}
+.about-video{
+	margin-top:40px;
+}
+
+.contact-pic{
+	height:50px;
+	width:50px;
+	background-size:cover;
+	padding:5px;
+	border-radius:30px 0px;
+	border:solid 2px forestgreen;
+	box-shadow:5px 5px lightgreen;
+}
+.contact-pic-1{
+	background-image:url(phone.png);
+}
+.contact-pic-2{
+	background-image:url(mail.png);
+}
+
+/* RECEIPT FORM DIVS */
+.receipt-item-div{
+	width:100%;
+	height:220px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.item-pic{
+	width:200px;
+	height:200px;
+	float:left;
+	margin-right:30px;
+}
+.item1-pic{
+	background-image:url(pencils.jpg);
+}
+.item2-pic{
+	background-image:url(notebook.jpg);
+}
+.item3-pic{
+	background-image:url(calculator.jpeg);
+}
+.item-name{
+	float:left;
+	margin-right:10px;
+	
+	font-size:30px;
+	font-weight:bold;
+	color:forestgreen;
+}
+.item-unitprice{
+	float:left;
+	
+	font-size:30px;
+	color:black;
+}
+.submit-button{
+	width:50%;
+	height:50px;
+	background:forestgreen;
+	border:solid 2px lightgreen;
+	border-radius:30px 0px;
+	
+	font-size:30px;
+	font-weight:bold;
+	line-height:50px;
+	color:white;
+	font-family:sans-serif;
+}
+.submit-button:hover{
+	background:dodgerblue;
+	cursor:pointer;
+}
+#receipt-total{
+	font-size:35px;
+	font-weight:bold;
+	color:black;
+	font-family:sans-serif;
+	text-decoration:underline;
+}
+
+/* REGISTER FORM DIVS */
+.register-body{
+	height:auto;
+	min-width:500px;
+}
+.register-table{
+	width:90%;
+}
+.reg-text-left{
+	text-align:left;
+}
+.reg-text-right{
+	text-align:right;
+	padding-right:10px;
+}
+.register-input{
+	width:98%;
+}
+.register-input:valid{
+	border:2px solid purple;
+}
+.register-input:invalid{
+	border:2px double red;
+}
+#register-submit{
+	width:50%;
+	height:30px;
+	background:forestgreen;
+	border:solid 2px lightgreen;
+	border-radius:30px 0px;
+	margin-top:20px;
+	
+	font-size:20px;
+	font-weight:bold;
+	line-height:25px;
+	color:white;
+	font-family:sans-serif;
+}
+#register-submit:hover{
+	background:dodgerblue;
+	cursor:pointer;
+}
+
+/* REGISTER VALIDATION DIV */
+#validate-div{
+	margin-top:30px;
+}
+.val-title{
+	width:100%;
+	text-align:center;
+	font-size:30px;
+	color:forestgreen;
+	font-weight:bold;
+	font-family:sans-serif;
+}
+.val-info{
+	margin:10px;
+	border-top:dashed 1px lightgreen;
+	border-bottom:dashed 1px lightgreen;
+}
+.val-label{
+	font-size:15px;
+	font-weight:bold;
+}
+.val-data{
+	font-size:15px;
+	font-style:italic;
+}
+.val-status{
+	font-size:15px;
+	color:red;
+	font-family:sans-serif;
+}
+
+/* RENT DIVS */	
+.rent-header{
+	text-align:center;
+	font-size:20px;
+	font-family:sans-serif;
+	font-weight:bold;
+	color:forestgreen;
+	margin-bottom:20px;
+}
+.rent-inputs{
+	width:80%;
+	text-align:left;
+	font-size:20px;
+}
+.rent-select-label{
+	color:forestgreen;
+	font-weight:bold;
+}
+#rent-item-selection{
+	font-size:15px;
+	margin-left:10px;
+	margin-bottom:10px;
+}
+.rent-date-label{
+	font-family:sans-serif;
+	font-size:15px;
+}
+.rent-date{
+	margin-left:10px;
+	margin-bottom:10px;
+}
+#rent-submit{
+	width:50%;
+	height:30px;
+	background:forestgreen;
+	border:solid 2px lightgreen;
+	border-radius:30px 0px;
+	margin-top:20px;
+	
+	font-size:20px;
+	font-weight:bold;
+	line-height:25px;
+	color:white;
+	font-family:sans-serif;
+}
+#rent-submit:hover{
+	background:dodgerblue;
+	cursor:pointer;
+}
+#rent-total{
+	padding-top:20px;
+	padding-bottom:20px;
+	color:dodgerblue;
+	font-size:40px;
+	font-weight:bold;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~ DESKTOP CSS ~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media only screen and (min-width: 961px){
+	.initial{
+		position:static;
+		top:5px;
+		left:5px;
+		width:200px;
+	}
+	.page-header{
+		width:300px;
+		border-radius:30px 0px;
+	}
+	.register{
+		position:absolute;
+		right:0px;
+		top:0px;
+		height:35px;
+		width:100px;
+		font-size:20px;
+		line-height:35px;
+	}
+	.rent{
+		position:absolute;
+		right:100px;
+		top:0px;
+		height:35px;
+		width:100px;
+		font-size:20px;
+		line-height:35px;
+	}
+	.nav-bar{
+		width:1200px;
+	}
+	.nav-item{
+		float:left;
+		width:290px;
+		border-left:solid 5px lightgreen;
+		border-right:solid 5px lightgreen;
+	}
+	.body-div{
+		width:1200px;
+	}
+	.home-body{
+		height:auto;
+	}
+
+	.home-slideshow{
+		width:1000px;
+		height:500px;
+	}
+
+/* ABOUT */
+	.about-body{
+		height:450px;
+	}
+	.about-info-div{
+		width:95%;
+	}
+	.about-sub-div{
+		float:left;
+		width:28%;
+		height:330px;
+		margin-right:1%;
+		margin-left:1%;
+	}
+	.about-pic-1{
+		width:200px;
+		height:90px;
+	}
+	.about-video{
+		width:95%;
+		height:150px;
+	}
+
+/* CONTACT */
+	.contact-body{
+		padding-top:30px;
+		height:300px;
+	}
+	
+/* RECEIPT */
+	.receipt-body{
+		height:auto;
+		min-width:500px;
+	}
+	.receipt-info-div{
+		height:auto;
+		margin-bottom:30px;
+	}
+
+/* REGISTER */
+	.register-body{
+		height:auto;
+		min-width:500px;
+	}
+	
+/* RENT */
+	.rent-info-div{
+		height:auto;
+		margin-bottom:30px;
+	}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~ TABLET CSS ~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media only screen and (min-width: 501px) and (max-width: 960px){
+	.initial{
+		position:static;
+		top:5px;
+		left:5px;
+		width:200px;
+	}
+	.page-header{
+		width:300px;
+		border-radius:30px 0px;
+	}
+	.register{
+		position:absolute;
+		right:0px;
+		top:0px;
+		height:35px;
+		width:100px;
+		font-size:20px;
+		line-height:35px;
+	}
+	.rent{
+		position:absolute;
+		right:100px;
+		top:0px;
+		height:35px;
+		width:100px;
+		font-size:20px;
+		line-height:35px;
+	}
+	.nav-bar{
+		width:70%;
+		min-width:500px;
+	}
+	.nav-item{
+		float:left;
+		width:22%;
+		border-right:solid 10px lightgreen;
+	}
+	.body-div{
+		width:70%;
+		min-width:500px;
+		border-radius:0px 0px 30px 30px;
+	}
+	.home-body{
+		height:auto;
+	}
+	.home-slideshow{
+		width:450px;
+		height:225px;
+	}
+
+/* ABOUT */
+	.about-body{
+		height:auto;
+	}
+	.about-sub-div{
+		margin-bottom:30px;
+	}
+	.about-pic-1{
+		width:200px;
+		height:90px;
+	}
+
+/* CONTACT */
+	.contact-body{
+		padding-top:30px;
+		height:300px;
+	}
+	
+/* RECEIPT */
+	.receipt-body{
+		height:auto;
+		min-width:500px;
+	}
+	.receipt-info-div{
+		height:auto;
+		margin-bottom:30px;
+	}
+	
+/* RENT */
+	.rent-info-div{
+		height:auto;
+		margin-bottom:30px;
+	}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~ MOBILE CSS ~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media only screen and (max-width: 500px){
+	.initial{
+		position:static;
+		top:5px;
+		width:100%;
+		text-align:center;
+	}
+	.page-header{
+		width:100%;
+	}
+	.register{
+		margin-top:10px;
+		height:30px;
+		width:100%;
+		font-size:20px;
+		line-height:30px;
+	}
+	.rent{
+		margin-top:10px;
+		height:30px;
+		width:100%;
+		font-size:20px;
+		line-height:30px;
+	}
+	.nav-bar{
+		width:100%;
+	}
+	.nav-item{
+		width:100%;
+		border-bottom:solid 5px lightgreen;
+	}
+	.body-div{
+		width:100%;
+	}
+	.home-body{
+		height:auto;
+	}
+	.home-slideshow{
+		width:100%;
+		height:150px;
+	}
+
+/* ABOUT */
+	.about-body{
+		height:auto;
+	}
+
+/* CONTACT */
+	.contact-body{
+		padding-top:30px;
+		height:300px;
+	}
+	
+/* RECEIPT */
+	.receipt-body{
+		height:auto;
+		min-width:500px;
+	}
+	.receipt-info-div{
+		height:auto;
+		margin-bottom:30px;
+	}
+	
+/* RENT */
+	.rent-info-div{
+		height:auto;
+		margin-bottom:30px;
+	}
+}
